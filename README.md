@@ -14,9 +14,9 @@ URL: `ec2-18-217-217-205.us-east-2.compute.amazonaws.com`
 - Create a file namded grader `sudo nano /etc/sudoers.d/grader`
   - Append `grader ALL=(ALL:ALL) ALL`
 ```
-usermod -aG sudo grader
+Passwd grader
 ```
-
+- then inpou password for grader
 ## Update packages
 
 `apt-get update`
