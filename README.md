@@ -150,15 +150,13 @@ sudo pip install httplib2
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel info
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-    
-</VirtualHost>
-  
+    </VirtualHost>
   ```
   
   
- -Enable the virtual host:
+ - Enable the virtual host:
  ``` $ sudo a2ensite  catalog.conf```
--Restart Apache
+- Restart Apache
 ``` sudo /etc/init.d/apache2 restart ```
 
 
