@@ -96,22 +96,22 @@ Install the `libapache2-mod-wsgi` package:
 
 `sudo apt-get install postgresql postgresql-contrib`
 
--Create a PostgreSQL user called `catalog` with:
+- Create a PostgreSQL user called `catalog` with:
 
 `sudo -u postgres createuser -P catalog`
 
--input uour password
+- input uour password
 
--and run this command to create database
+- and run this command to create database
 
 `sudo -u postgres createdb -O catalog catalog`
 - Open the database setup file:  
   `sudo nano database_setup.py`
-4. Change the line starting with "engine" to (fill in a password):  
+- Change the line starting with "engine" to (fill in a password):  
   ```python engine = create_engine('postgresql://catalog:password@localhost/catalog')``` 
 
   ## (important) To avoid make 1 week in that error like me
--chande directory of client_secret to absolute path in projet.py
+- chande directory of client_secret to absolute path in projet.py
 ``` /var/www/catalog/catalog ```
 
 
@@ -127,8 +127,8 @@ sudo pip install httplib2
 ```
 
 ## Configure and enable a new virtual host
--Create a virtual host config file in /etc/apache2/sites-available-chandr 
--paste this content into this file 
+- Create a virtual host config file in /etc/apache2/sites-available-chandr 
+- paste this content into this file 
 
 - Paste this code: 
   ```
@@ -150,8 +150,11 @@ sudo pip install httplib2
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel info
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
 </VirtualHost>
+  
   ```
+  
   
  -Enable the virtual host:
  ``` $ sudo a2ensite  catalog.conf```
@@ -162,14 +165,14 @@ sudo pip install httplib2
 ## Google OAuth Login
  - Visit: https://console.developers.google.com/project
   - thrn go credentials
-  -Add ``` ec2-18-217-217-205.us-east-2.compute.amazonaws.com ```` To Authorized redirect URIs
+  - Add ``` ec2-18-217-217-205.us-east-2.compute.amazonaws.com ``` To Authorized redirect URIs
   
 ## for tailing the apache logs so I can see errors in real time:
- -https://www.liquidweb.com/kb/how-to-watch-server-logs-in-real-time
+ - https://www.liquidweb.com/kb/how-to-watch-server-logs-in-real-time
  
  
- ##Helpful Links :
- -https://discussions.udacity.com/c/nd004-p7-linux-based-server-configuration
- -https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
- -https://discussions.udacity.com/t/500-internal-server-error-and-mod-wsgi-warnings-in-error-logs/489043
+ ## Helpful Links :
+ - https://discussions.udacity.com/c/nd004-p7-linux-based-server-configuration
+ - https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+ - https://discussions.udacity.com/t/500-internal-server-error-and-mod-wsgi-warnings-in-error-logs/489043
  
