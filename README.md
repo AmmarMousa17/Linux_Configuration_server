@@ -1,5 +1,5 @@
 
-#Linux Congiguration Server
+# Linux Configuration Server
 
 # Server details
 IP address:`18.217.217.205`
