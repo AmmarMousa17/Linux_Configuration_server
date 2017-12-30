@@ -2,8 +2,8 @@
 # Linux Configuration Server
 
 # Server details
-IP address:`18.217.217.205`
-URL: `ec2-18-217-217-205.us-east-2.compute.amazonaws.com`
+IP address:`http://18.217.155.188`
+URL: `ec2-18-217-155-188.us-east-2.compute.amazonaws.com`
 
 # Configuration changes
 
@@ -163,7 +163,7 @@ sudo pip install httplib2
 ## Google OAuth Login
  - Visit: https://console.developers.google.com/project
   - thrn go credentials
-  - Add ``` ec2-18-217-217-205.us-east-2.compute.amazonaws.com ``` To Authorized redirect URIs
+  - Add ``` ec2-18-217-155-188.us-east-2.compute.amazonaws.com ``` To Authorized redirect URIs
   
 ## for tailing the apache logs so I can see errors in real time:
  - https://www.liquidweb.com/kb/how-to-watch-server-logs-in-real-time
